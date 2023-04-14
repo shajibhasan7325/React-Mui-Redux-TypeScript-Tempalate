@@ -5,6 +5,7 @@ import Navbar from "./scenes/navbar";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { themeSettings } from "./theme";
+import Dashboard from "./scenes/dashboard";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);
@@ -16,7 +17,7 @@ function App() {
           <Box height="100%" width="100%" padding="1rem 2rem 4rem 2rem">
             <Navbar />
             <Routes>
-              <Route path="/" element={<div>dashBord page</div>} />
+              <Route path="/" element={<Dashboard />} />
             </Routes>
           </Box>
         </ThemeProvider>
